@@ -19,7 +19,7 @@ public class SplashActivity extends AppCompatActivity {
         setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splash);
-         initView();
+        initView();
         initSplash();
     }
 
