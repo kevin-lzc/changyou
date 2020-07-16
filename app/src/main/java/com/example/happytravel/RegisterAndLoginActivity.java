@@ -7,8 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-
-
 public class RegisterAndLoginActivity extends AppCompatActivity {
     Button WeChat_Login_api;
     Button Others_Login_api;
@@ -16,6 +14,7 @@ public class RegisterAndLoginActivity extends AppCompatActivity {
     Button Sign_up;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_and_login);
 
