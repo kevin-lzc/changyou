@@ -29,6 +29,7 @@ public class SplashActivity extends AppCompatActivity {
 
     private void initSplash() {
         AlphaAnimation alphaAnimation=new AlphaAnimation(5f,1f);
+
         alphaAnimation.setDuration(3000);
         mSplashImg.setAnimation(alphaAnimation);
         alphaAnimation.setAnimationListener(new Animation.AnimationListener() {
@@ -40,6 +41,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 Intent intent=new Intent(SplashActivity.this,RegisterAndLoginActivity.class);
+                intent.setClass(getApplicationContext(),RegisterAndLoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
 
