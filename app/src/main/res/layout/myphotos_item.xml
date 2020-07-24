@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/imageView_myphotos_icon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_baseline_photo_24"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/myphotos_date"
+        android:text="日期"
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignTop="@+id/imageView_myphotos_icon"
+        android:layout_toRightOf="@id/imageView_myphotos_icon"
+        android:textSize="36dp"
+        android:textColor="#DD4F22"
+        />
+
+    <TextView
+        android:id="@+id/myphotos_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView_myphotos_icon"
+
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="54dp"
+        android:layout_toEndOf="@id/imageView_myphotos_icon"
+        android:layout_toRightOf="@id/imageView_myphotos_icon"
+        android:text="内容" />
+
+
+    <TextView
+        android:id="@+id/myphotos_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="7dp"
+        android:layout_marginBottom="13dp"
+        android:layout_toRightOf="@id/imageView_myphotos_icon"
+        android:drawableLeft="@drawable/ic_baseline_location_on_24"
+
+        android:text="定位" />
+
+
+</RelativeLayout>

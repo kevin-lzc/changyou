@@ -1,9 +1,11 @@
-package com.example.happytravel;
+package com.example.happytravel.Activity;
 
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.happytravel.R;
 
 public class LoginActivity extends AppCompatActivity {
     @Override

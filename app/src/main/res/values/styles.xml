@@ -17,10 +17,10 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
     <style name="Launcher" parent="android:Theme.Holo.Light.NoActionBar">
-
-
-
+        <item name="android:windowBackground">@mipmap/start_bg</item>
     </style>
+
+
     <style name="Custom" />
     <style name="Custom.TabRadioButton">
         <item name="android:layout_width">0dp</item>
@@ -32,4 +32,5 @@
         <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/tab_text_color_selector</item>
     </style>
+
 </resources>

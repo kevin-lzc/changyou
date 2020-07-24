@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<!--放酒店的图片-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        >
+    </View>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="酒店名字，位置"
+           android:textSize="25sp"
+        />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="330dp"
+            >
+
+        <ImageView
+            android:id="@+id/GPS"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/gps"
+             android:layout_gravity="center_horizontal"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="地图/导航"
+            android:textSize="15sp"
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/subway"
+            />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="距离最近地铁口的距离"
+                android:textSize="25sp"
+                android:layout_gravity="center_vertical"
+            />
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/star"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/star"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/star"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/star"/>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/star"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="4.5"
+            android:textSize="25sp"
+            android:textColor="@android:color/holo_red_dark"/>
+        <View
+            android:layout_width="2dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="6dp"
+            android:background="@android:color/holo_red_dark"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:text="超过1W人下单"
+            android:textSize="20sp"
+            android:textColor="@android:color/holo_red_dark"
+            />
+
+    </LinearLayout>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="100dp"
+android:orientation="horizontal"
+           >
+           <LinearLayout
+               android:layout_width="150dp"
+               android:layout_height="80dp"
+               android:orientation="vertical"
+               >
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="入住时间"
+                   android:textSize="20sp"
+                   />
+              <CalendarView
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+               />
+           </LinearLayout>
+
+           <TextView
+               android:layout_width="70dp"
+               android:layout_height="40dp"
+               android:layout_marginLeft="23dp"
+               android:text="共一晚"
+               android:gravity="center"
+               android:textSize="20sp"
+               android:layout_gravity="center_vertical"
+               />
+
+           <LinearLayout
+               android:layout_width="150dp"
+               android:layout_marginLeft="19dp"
+               android:layout_height="80dp"
+               android:orientation="vertical"
+               >
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginLeft="69dp"
+                   android:text="入住时间"
+                   android:textSize="20sp"
+                   />
+               <CalendarView
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   />
+           </LinearLayout>
+           
+           
+           
+           
+       </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="200dp"
+        android:src="@mipmap/ic_launcher"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:layout_marginLeft="10dp"
+            android:text="舒适大床房(无窗)【每日消毒】"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:text="不含早 18-20㎡ 单人床 适合两人入住"
+            android:textSize="15sp"
+            android:textColor="@android:color/darker_gray"
+           />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="19:00前可免费取消订单"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/holo_green_dark"
+          />
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:text="￥ 74"
+            android:textSize="20sp"
+            android:textColor="@android:color/holo_red_light"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="￥ 104"
+            android:textSize="10sp"
+            android:textColor="@android:color/darker_gray"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="已减少34元"
+                android:background="@android:color/holo_red_light"
+                android:textSize="15sp"
+                android:textColor="@android:color/darker_gray"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/tips"
+            />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="无窗"
+                android:textSize="15sp"
+                android:textColor="@android:color/darker_gray"
+                android:layout_gravity="center_vertical"
+            />
+
+            <Button
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="100dp"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:text="点击下单"
+                android:textSize="15sp"
+               android:gravity="center"
+                android:textColor="@android:color/white"
+                android:background="@android:color/holo_red_light"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,15 +1,20 @@
-package com.example.happytravel;
+package com.example.happytravel.Activity;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.happytravel.Datas;
 import com.example.happytravel.adapters.ListViewAdapter;
 import com.example.happytravel.bean.ItemBean;
 
+
+import com.example.happytravel.R;
+
 import java.util.ArrayList;
 import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 private static final String TAG="MainActivity";
@@ -28,7 +33,7 @@ private  RecyclerView mList;
     private void initData(){
         List<ItemBean> mData = new ArrayList<>();
 
-        for(int i=0;i<Datas.icons.length;i++){
+        for(int i = 0; i< Datas.icons.length; i++){
             ItemBean data=new ItemBean();
             data.icon=Datas.icons[i];
             data.title="我是第"+i+"条";
