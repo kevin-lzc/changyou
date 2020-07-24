@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/imageView_hotel_icon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_baseline_photo_24"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+
+        android:text="酒店名称"
+        android:id="@+id/hotel_name"
+
+        android:textSize="16dp"
+        android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_18"
+        android:layout_marginLeft="5dp"
+
+        android:background="@android:color/transparent"
+        android:theme="@android:style/Theme.Translucent"
+        />
+
+    <TextView
+        android:id="@+id/room_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView_hotel_icon"
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="24dp"
+        android:layout_toRightOf="@id/imageView_hotel_icon"
+        android:text="房间详情" />
+
+    <TextView
+        android:id="@+id/room_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView_hotel_icon"
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="48dp"
+        android:layout_toEndOf="@id/imageView_hotel_icon"
+        android:layout_toRightOf="@id/imageView_hotel_icon"
+        android:text="预定时间" />
+
+    <TextView
+        android:id="@+id/room_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView_hotel_icon"
+
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="72dp"
+        android:layout_toEndOf="@id/imageView_hotel_icon"
+        android:layout_toRightOf="@id/imageView_hotel_icon"
+        android:text="总价" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+
+        android:layout_centerVertical="true"
+        android:text="评价" />
+
+
+
+
+</RelativeLayout>
