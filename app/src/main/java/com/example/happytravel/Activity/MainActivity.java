@@ -1,8 +1,10 @@
-package com.example.happytravel;
+package com.example.happytravel.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.happytravel.R;
 
 public class MainActivity extends AppCompatActivity {
 

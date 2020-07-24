@@ -1,14 +1,15 @@
-package com.example.happytravel;
+package com.example.happytravel.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.RelativeLayout;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.happytravel.R;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -40,7 +41,7 @@ public class SplashActivity extends AppCompatActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                Intent intent=new Intent(SplashActivity.this,RegisterAndLoginActivity.class);
+                Intent intent=new Intent(SplashActivity.this, RegisterAndLoginActivity.class);
                 intent.setClass(getApplicationContext(),RegisterAndLoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }

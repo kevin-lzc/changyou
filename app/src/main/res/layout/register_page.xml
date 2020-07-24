@@ -8,7 +8,7 @@
     <ImageView
         android:layout_width="37dp"
         android:layout_height="37dp"
-        android:src="@mipmap/back"/>
+        android:src="@mipmap/back_black"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -36,59 +36,66 @@
         android:orientation="vertical">
 
 
-        <LinearLayout
-            android:id="@+id/telPut"
-            android:layout_width="350dp"
-            android:layout_height="40dp"
-            android:orientation="horizontal"
-            android:background="@drawable/register_tel_bg"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+86"
-                android:textSize="20sp"/>
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="2dp"
-                android:src="@mipmap/down"/>
             <EditText
                 android:layout_width="300dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="25dp"
                 android:maxLines="1"
-                android:background="@null"
-                android:hint="请输入手机号"
+                android:background="@drawable/register_tel_bg"
+                android:hint="请输入账号"
                 android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
                 />
-        </LinearLayout>
+
+            <EditText
+                android:layout_marginTop="40dp"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:maxLines="1"
+                android:background="@drawable/register_tel_bg"
+                android:hint="请输入密码"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                />
+
+            <EditText
+                android:layout_marginTop="40dp"
+                android:layout_width="300dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:maxLines="1"
+                android:background="@drawable/register_tel_bg"
+                android:hint="请再次输入密码"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                />
+
 
         <Button
             android:layout_width="350dp"
             android:layout_height="40dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="40dp"
+            android:textSize="25sp"
             android:background="@drawable/set_press_yanzhengma_bg"
-            android:text="获取验证码"/>
+            android:text="点击注册"/>
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:paddingBottom="10dp"
+        android:paddingBottom="15dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp"
         android:orientation="horizontal">
 
 
         <androidx.appcompat.widget.AppCompatCheckBox
-            android:layout_width="40dp"
+            android:layout_width="30dp"
             android:layout_height="40dp"
             />
         <TextView
+            android:layout_marginLeft="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:maxLines="1"
             android:text="注册即代表同意我们的《服务协议》和《隐私政策》"
 
             />
