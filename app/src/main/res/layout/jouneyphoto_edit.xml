@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/jp_edit"
+    android:layout_alignParentRight="true"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/jp_edit1"
+
+       >
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:background="@drawable/register_yanzhengma_bg_press"
+            android:text="取消" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_centerHorizontal="true"
+        android:text="编辑旅拍"
+        android:textColor="#020202"
+        android:textSize="25sp"
+        android:textStyle="normal"
+
+        />
+
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/set_press_yanzhengma_bg"
+            android:text="发表" />
+    </LinearLayout>
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/jp_edit1"
+        android:background="@drawable/back_cccccc"
+        >
+
+
+
+</TextView>
+
+
+    <LinearLayout
+        android:id="@+id/jp_edit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_marginTop="100dp"
+        >
+        <EditText
+            android:layout_width="400dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:maxLines="1"
+            android:background="@null"
+            android:hint="分享你的旅程"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/jp_edit3"
+        android:layout_below="@id/jp_edit1"
+        android:layout_marginTop="460dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        >
+
+        <ImageButton
+            android:id="@+id/photo"
+
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/jp_edit1"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
+</RelativeLayout>
