@@ -1,4 +1,4 @@
-package com.example.happytravel;
+package com.example.happytravel.bean;
 
 public class Product {
     private int img;

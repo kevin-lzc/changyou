@@ -63,6 +63,7 @@
 
         <RadioButton
             android:id="@+id/home_tab"
+            android:layout_weight="1"
             style="@style/Custom.TabRadioButton"
             android:checked="true"
             android:drawableTop="@drawable/ic_home_black_24dp"
@@ -71,19 +72,23 @@
         <RadioButton
             android:id="@+id/record_tab"
             style="@style/Custom.TabRadioButton"
-            android:drawableTop="@drawable/ic_home_black_24dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:drawableTop="@drawable/ic_baseline_add_a_photo_24"
             android:text="旅拍" />
 
         <RadioButton
             android:id="@+id/order_tab"
+            android:layout_weight="1"
             style="@style/Custom.TabRadioButton"
-            android:drawableTop="@drawable/ic_home_black_24dp"
+            android:drawableTop="@drawable/ic_baseline_assignment_24"
             android:text="订单" />
 
         <RadioButton
+            android:layout_weight="1"
             android:id="@+id/myaccount_tab"
             style="@style/Custom.TabRadioButton"
-            android:drawableTop="@drawable/ic_home_black_24dp"
+            android:drawableTop="@drawable/ic_baseline_perm_identity_24"
             android:text="我的" />
     </RadioGroup>
 

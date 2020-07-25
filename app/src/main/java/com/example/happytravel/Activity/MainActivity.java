@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.happytravel.Datas;
+import com.example.happytravel.bean.Datas;
 import com.example.happytravel.adapters.ListViewAdapter;
 import com.example.happytravel.bean.ItemBean;
 

@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:id="@+id/my_center1"
-        android:background="@drawable/register_yanzhengma_bg"
+        android:background="#FF824B"
         >
 
         <Button
@@ -41,11 +41,11 @@
 
     <LinearLayout
         android:id="@+id/my_center2"
-        android:layout_marginLeft="30dp"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/my_center1"
         android:background="@drawable/style_item_bottom"
+        android:orientation="horizontal"
         >
 
         <ImageView
@@ -54,24 +54,32 @@
             android:src="@mipmap/order">
 
         </ImageView>
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:background="@null"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:textStyle="normal"
+            android:layout_gravity="center_vertical"
             android:text="过往订单 "/>
 
+        <ImageView
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_18"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="235dp"
+            />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/my_center3"
-        android:layout_marginLeft="30dp"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/my_center2"
         android:background="@drawable/style_item_bottom"
+        android:orientation="horizontal"
         >
 
         <ImageView
@@ -80,60 +88,75 @@
             android:src="@mipmap/like2">
 
         </ImageView>
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
+            android:layout_gravity="center_vertical"
             android:background="@null"
             android:layout_marginLeft="5dp"
             android:textStyle="normal"
             android:text="心愿清单 "/>
+        <ImageView
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_18"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="235dp"
+            />
 
     </LinearLayout>
     <LinearLayout
         android:id="@+id/my_center4"
-        android:layout_marginLeft="30dp"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/my_center3"
+        android:orientation="horizontal"
         android:background="@drawable/style_item_bottom"
         >
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="46dp"
-            android:src="@mipmap/aaa111">
+            android:src="@mipmap/abc">
 
         </ImageView>
 
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:layout_marginLeft="5dp"
             android:background="@null"
             android:textStyle="normal"
+            android:layout_gravity="center_vertical"
             android:text="我的旅拍"/>
-
+        <ImageView
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_18"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="240dp"
+            />
     </LinearLayout>
 
-    <TextView
+    <View
         android:id="@+id/my_center5"
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:layout_below="@id/my_center4"
-        android:background="@drawable/back_cccccc"
+        android:background="#F2F3F5"
         >
 
 
-    </TextView>
+    </View>
 
     <LinearLayout
         android:id="@+id/my_center6"
-        android:layout_marginLeft="30dp"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/my_center5"
+        android:orientation="horizontal"
         android:background="@drawable/style_item_bottom"
         >
 
@@ -143,20 +166,28 @@
             android:src="@mipmap/language">
 
         </ImageView>
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:layout_marginLeft="5dp"
             android:background="@null"
             android:textStyle="normal"
+            android:layout_gravity="center_vertical"
             android:text="语言设置 "/>
+        <ImageView
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_18"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="240dp"
+            />
 
     </LinearLayout>
     <LinearLayout
         android:id="@+id/my_center7"
-        android:layout_marginLeft="30dp"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
         android:layout_height="50dp"
         android:layout_below="@id/my_center6"
         android:background="@drawable/style_item_bottom"
@@ -168,76 +199,99 @@
             android:src="@mipmap/history">
 
         </ImageView>
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:layout_marginLeft="5dp"
             android:textStyle="normal"
+            android:layout_gravity="center_vertical"
             android:background="@null"
             android:text="浏览足迹 "/>
-
+        <ImageView
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_18"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="240dp"
+            />
     </LinearLayout>
 
     <LinearLayout
+        android:orientation="horizontal"
         android:id="@+id/my_center8"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="2dp"
         android:layout_height="50dp"
         android:layout_below="@id/my_center7"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="0.5dp"
         android:background="@drawable/style_item_bottom">
 
         <ImageView
-            android:layout_width="38dp"
+            android:layout_width="37dp"
             android:layout_height="wrap_content"
             android:src="@mipmap/help">
-
         </ImageView>
 
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:text="帮助中心"
+            android:layout_gravity="center_vertical"
             android:textSize="20sp"
             android:background="@null"
             android:textStyle="normal" />
-
+        <ImageView
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_18"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="245dp"
+            />
     </LinearLayout>
 
+
     <LinearLayout
+        android:orientation="horizontal"
         android:id="@+id/my_center9"
-        android:layout_marginLeft="30dp"
-        android:layout_width="350dp"
+        android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@id/my_center8"
-        android:background="@drawable/style_item_bottom"
-        >
+        android:layout_marginTop="0.5dp"
+        android:background="@drawable/style_item_bottom">
 
         <ImageView
-            android:layout_width="38dp"
+            android:layout_width="37dp"
             android:layout_height="wrap_content"
             android:src="@mipmap/ourselves">
 
         </ImageView>
-        <Button
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_marginLeft="5dp"
-            android:textStyle="normal"
+            android:layout_marginLeft="10dp"
             android:background="@null"
-            android:text="关于我们 "/>
-
+            android:layout_gravity="center_vertical"
+            android:text="关于我们 "
+            android:textSize="20sp"
+            android:textStyle="normal" />
+        <ImageView
+            android:layout_width="25sp"
+            android:layout_height="25sp"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_18"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="242dp"
+            />
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/my_center9"
-        android:background="@drawable/style_item_gray"
+        android:layout_marginTop="0dp"
+        android:background="#F2F3F5"
         android:orientation="vertical">
 
         <LinearLayout
@@ -255,33 +309,27 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:text="对我们的产品有意"
-                android:textSize="30dp" />
+                android:layout_gravity="center_vertical"
+                android:text="对我们的产品有意见或建议？"
+                android:textSize="20sp" />
 
 
-            <Button
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_marginLeft="80dp"
                 android:layout_marginTop="10dp"
                 android:layout_toRightOf="@+id/ours1"
                 android:background="@mipmap/close" />
 
 
-
-
         </LinearLayout>
-        <TextView
-            android:id="@+id/ours2"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_below="@id/ours"
-            android:layout_marginLeft="20dp"
-            android:text="见或建议？"
-            android:textSize="30dp" />
+
+
 
         <TextView
             android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/ours"
             android:layout_marginLeft="20dp"
