@@ -15,8 +15,8 @@ public class fragment_hotel extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.hotel_list_page, container, false);
-        return view;
+        View hotel_fragment = inflater.inflate(R.layout.hotel_list_page, container, false);
+        return hotel_fragment;
     }
 }
 

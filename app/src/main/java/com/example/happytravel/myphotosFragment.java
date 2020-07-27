@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.happytravel.adapters.MymyphotosRecyclerViewAdapter;
 import com.example.happytravel.dummy.DummyContent;
 
 /**

@@ -11,12 +11,12 @@ import androidx.fragment.app.Fragment;
 
 import com.example.happytravel.R;
 
-public class fragment_jingdian extends Fragment {
+public class mycenter_fragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View jingdian_fragment = inflater.inflate(R.layout.jingdian_list_page, container, false);
-        return jingdian_fragment;
+        View mycenterFragment = inflater.inflate(R.layout.my_center, container, false);
+        return mycenterFragment;
     }
 }
 

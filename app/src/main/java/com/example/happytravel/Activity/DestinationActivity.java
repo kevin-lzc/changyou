@@ -13,8 +13,8 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.happytravel.R;
-import com.example.happytravel.fragment.fragment_jingdian;
 import com.example.happytravel.fragment.fragment_hotel;
+import com.example.happytravel.fragment.fragment_jingdian;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
 import net.lucode.hackware.magicindicator.ViewPagerHelper;

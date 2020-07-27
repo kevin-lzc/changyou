@@ -12,12 +12,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.happytravel.BlankFragment;
-import com.example.happytravel.Datas;
 import com.example.happytravel.adapters.ListViewAdapter;
-import com.example.happytravel.bean.ItemBean;
 
 
 import com.example.happytravel.R;
+import com.example.happytravel.fragment.main_fragment;
+import com.example.happytravel.fragment.mycenter_fragment;
+import com.example.happytravel.fragment.order_fragment;
+import com.example.happytravel.fragment.travel_photo_fragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Fragment> mFragments;
     private FragmentPagerAdapter mAdapter;
+    private ListViewAdapter mAdapter1;
+    private main_fragment mMainFragment;
+    private mycenter_fragment mMycenterFragment;
+    private travel_photo_fragment mTravelPhotoFragment;
+    private order_fragment mOrderFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,22 +46,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initView();
         initListener();
-        mList=(RecyclerView) this.findViewById(R.id.recycler_view);
-        initData();
+        mList=this.findViewById(R.id.recycler_view);
+//        initData();
     }
     /**模拟数据*/
-    private void initData(){
-        List<ItemBean> mData = new ArrayList<>();
-
-        for(int i = 0; i< Datas.icons.length; i++){
-            ItemBean data=new ItemBean();
-            data.icon=Datas.icons[i];
-            data.title="我是第"+i+"条";
-            mData.add(data);
-        }
-        ListViewAdapter adapter=new ListViewAdapter(mData);
-        mList.setAdapter(adapter);
-    }
+//    private void initData(){
+//        List<ItemBean> mData = new ArrayList<>();
+//
+//        for(int i = 0; i< Datas.icons.length; i++){
+//            ItemBean data=new ItemBean();
+//            data.icon=Datas.icons[i];
+//            data.title="我是第"+i+"条";
+//            mData.add(data);
+//        }
+//        ListViewAdapter mAdapter1= new ListViewAdapter(mData);
+//        mList.setAdapter(mAdapter1);
+//    }
 
     private void initListener() {
 
@@ -63,12 +71,16 @@ public class MainActivity extends AppCompatActivity {
         // find view
         mViewPager = findViewById(R.id.fragment_vp);
         mTabRadioGroup = findViewById(R.id.tabs_rg);
+        mMainFragment = new main_fragment();
+        mMycenterFragment = new mycenter_fragment();
+        mTravelPhotoFragment = new travel_photo_fragment();
+        mOrderFragment = new order_fragment();
         // init fragment
         mFragments = new ArrayList<>(4);
-        mFragments.add(BlankFragment.newInstance("这里是首页"));
-        mFragments.add(BlankFragment.newInstance("这里是记录"));
-        mFragments.add(BlankFragment.newInstance("这里是订单"));
-        mFragments.add(BlankFragment.newInstance("这里是我的"));
+        mFragments.add(mMainFragment);
+        mFragments.add(mTravelPhotoFragment);
+        mFragments.add(mOrderFragment);
+        mFragments.add(mMycenterFragment);
         // init view pager
         mAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager(), mFragments);
         mViewPager.setAdapter(mAdapter);
