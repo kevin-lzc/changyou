@@ -53,38 +53,5 @@
 
             />
     </LinearLayout>
-    <RadioGroup
-        android:id="@+id/tabs_rg"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_alignParentBottom="true"
-        android:background="#dcdcdc"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/home_tab"
-            style="@style/Custom.TabRadioButton"
-            android:checked="true"
-            android:drawableTop="@drawable/ic_home_black_24dp"
-            android:text="首页" />
-
-        <RadioButton
-            android:id="@+id/record_tab"
-            style="@style/Custom.TabRadioButton"
-            android:drawableTop="@drawable/ic_home_black_24dp"
-            android:text="旅拍" />
-
-        <RadioButton
-            android:id="@+id/order_tab"
-            style="@style/Custom.TabRadioButton"
-            android:drawableTop="@drawable/ic_home_black_24dp"
-            android:text="订单" />
-
-        <RadioButton
-            android:id="@+id/myaccount_tab"
-            style="@style/Custom.TabRadioButton"
-            android:drawableTop="@drawable/ic_home_black_24dp"
-            android:text="我的" />
-    </RadioGroup>
 
 </RelativeLayout>
