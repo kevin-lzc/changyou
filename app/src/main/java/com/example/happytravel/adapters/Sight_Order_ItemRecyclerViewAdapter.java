@@ -1,4 +1,4 @@
-package com.example.happytravel;
+package com.example.happytravel.adapters;
 
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.happytravel.R;
 import com.example.happytravel.dummy.DummyContent.DummyItem;
 
 import java.util.List;
@@ -15,18 +16,18 @@ import java.util.List;
  * {@link RecyclerView.Adapter} that can display a {@link DummyItem}.
  * TODO: Replace the implementation with code for your data type.
  */
-public class MymyphotosRecyclerViewAdapter extends RecyclerView.Adapter<MymyphotosRecyclerViewAdapter.ViewHolder> {
+public class Sight_Order_ItemRecyclerViewAdapter extends RecyclerView.Adapter<Sight_Order_ItemRecyclerViewAdapter.ViewHolder> {
 
     private final List<DummyItem> mValues;
 
-    public MymyphotosRecyclerViewAdapter(List<DummyItem> items) {
+    public Sight_Order_ItemRecyclerViewAdapter(List<DummyItem> items) {
         mValues = items;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.myphotos_item, parent, false);
+                .inflate(R.layout.sight_order_item, parent, false);
         return new ViewHolder(view);
     }
 
