@@ -4,16 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     >
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:id="@+id/my_center1"
         android:background="#FF824B"
         >
-
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

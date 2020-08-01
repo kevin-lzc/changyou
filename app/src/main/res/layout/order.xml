@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="300dp"
         android:layout_height="400dp"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="50dp"
         android:src="@mipmap/my_order" />
 
@@ -21,75 +21,37 @@
         android:textSize="35sp"
         android:textStyle="normal"
         android:textColor="#020202"
-        android:layout_marginLeft="135dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginLeft="105dp"
+        android:layout_marginTop="450dp"
         android:text="我的订单"/>
 
     <LinearLayout
         android:layout_width="500dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
         android:layout_below="@id/order"
         >
 
 
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:layout_marginLeft="150dp"
+            android:layout_marginLeft="120dp"
             android:background="@null"
             android:text="登陆查看我的订单"
             android:textSize="15dp" />
 
         <Button
+            android:id="@+id/go_to_Login"
             android:layout_width="350dp"
             android:layout_height="40dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/set_press_yanzhengma_bg"
             android:text="现在就去"
-
+            android:textSize="20sp"
             />
     </LinearLayout>
-    <RadioGroup
-        android:id="@+id/tabs_rg"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:layout_alignParentBottom="true"
-        android:background="#dcdcdc"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/home_tab"
-            android:layout_weight="1"
-            style="@style/Custom.TabRadioButton"
-            android:checked="true"
-            android:drawableTop="@drawable/ic_home_black_24dp"
-            android:text="首页" />
-
-        <RadioButton
-            android:id="@+id/record_tab"
-            style="@style/Custom.TabRadioButton"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:drawableTop="@drawable/ic_baseline_add_a_photo_24"
-            android:text="旅拍" />
-
-        <RadioButton
-            android:id="@+id/order_tab"
-            android:layout_weight="1"
-            style="@style/Custom.TabRadioButton"
-            android:drawableTop="@drawable/ic_baseline_assignment_24"
-            android:text="订单" />
-
-        <RadioButton
-            android:layout_weight="1"
-            android:id="@+id/myaccount_tab"
-            style="@style/Custom.TabRadioButton"
-            android:drawableTop="@drawable/ic_baseline_perm_identity_24"
-            android:text="我的" />
-    </RadioGroup>
-
 </RelativeLayout>
