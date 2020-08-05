@@ -40,7 +40,7 @@ public class orderFragment extends Fragment {
     }
 
     private void initView() {
-        mGotoLogin = mOrderFragment.findViewById(R.id.go_to_Login);
+        mGotoLogin = mOrderFragment.findViewById(R.id.enter_now);
     }
 
 

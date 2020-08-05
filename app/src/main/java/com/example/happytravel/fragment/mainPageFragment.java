@@ -68,7 +68,7 @@ public class mainPageFragment extends Fragment implements ViewPager.OnPageChange
     }
 
     private void initView() {
-        mLookmore = mMainPage_fragment.findViewById(R.id.lookMore);
+        mLookmore = mMainPage_fragment.findViewById(R.id.look_more);
         mMainPage_goto_login = mMainPage_fragment.findViewById(R.id.mainPage_goto_login);
         mMainPage_looper = mMainPage_fragment.findViewById(R.id.main_page_looper);
         mLooperPagerAdapter = new LooperPagerAdapter();

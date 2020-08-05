@@ -80,7 +80,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     }
                     if (match) {
                         Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(this, MainPageActivity.class);
+                        Intent intent = new Intent(this, MainActivity.class);
                         startActivity(intent);
                         finish();//销毁此Activity
                     } else {
