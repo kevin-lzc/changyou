@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.happytravel.activity.baidu_SearchPlaceActivity">
+    tools:context="com.example.happytravel.Activity.baidu_SearchPlaceActivity">
 
     <RelativeLayout
         android:id="@+id/layout_action_bar"
