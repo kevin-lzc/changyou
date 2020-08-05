@@ -46,6 +46,7 @@ public class baidu_MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        initMapViewSDK();
         setContentView(R.layout.baidu_activity_map);
 
     }
