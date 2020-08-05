@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:background="@android:color/white"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:ignore="MissingDefaultResource">
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     >
     <ImageView
-        android:id="@+id/destination_back_btn"
-        android:layout_width="35dp"
+        android:layout_width="40dp"
         android:layout_centerVertical="true"
-        android:layout_height="35dp"
+        android:layout_height="40dp"
         android:src="@mipmap/back_black"
 />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="目的地"
+        android:text="我的收藏"
         android:textSize="25sp"
         android:textColor="@android:color/black"
         android:layout_centerInParent="true"
@@ -42,31 +43,11 @@
         android:layout_height="50dp"
         >
     </net.lucode.hackware.magicindicator.MagicIndicator>
-    <LinearLayout
-        android:background="#EAEBED"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:orientation="horizontal"
-        >
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@mipmap/search_black"
-            android:layout_marginLeft="10dp"
-/>
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="请输入关键字"
-            android:background="@null"
-            android:gravity="center"
-            />
-    </LinearLayout>
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/ViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
-
     </androidx.viewpager.widget.ViewPager>
 </LinearLayout>

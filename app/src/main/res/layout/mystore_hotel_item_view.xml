@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/mystore_jingdian_item_background"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xx酒店"
+            android:textSize="35sp"
+            />
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/right_jiantou"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="2dp"
+        android:background="@android:color/darker_gray"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="5dp"
+                android:src="@mipmap/ic_launcher"
+                />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/img1"
+                android:paddingLeft="5dp"
+                android:textSize="20sp"
+                android:text="1间，套房A(含早餐)"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2020-07-20 - 2020-07-25"
+                android:textSize="20sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总价：5000"
+                android:textSize="20sp"
+                />
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:text="评价"
+                android:layout_marginLeft="210dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/mystore_jingdian_item_background"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

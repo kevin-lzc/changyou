@@ -1,58 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activity.RegisterAndLoginActivity">
 
-    <ImageButton
-        android:id="@+id/Others_Login_api"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_marginTop="200dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        >
+    <ImageView
+        android:id="@+id/Others_Login_api"
+        android:layout_width="300dp"
+       android:layout_gravity="center_horizontal"
+        android:layout_height="80dp"
+        android:src="@mipmap/weibo_xin"
         android:layout_marginTop="92dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/WeChat_Login_api"
-        app:srcCompat="@android:drawable/bottom_bar" />
+    />
 
+            <ImageView
+                android:id="@+id/wechat_logo"
+                android:layout_width="300dp"
+               android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="80dp"
+                android:src="@mipmap/wechat_new"/>
+
+
+    <RelativeLayout
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        >
     <Button
         android:id="@+id/Log_in"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
+     android:layout_marginLeft="115dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginLeft="92dp"
-        android:text="Log_in"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.893" />
-
+        android:text="登录"
+        android:background="#FF5722"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+       />
     <Button
         android:id="@+id/Sign_up"
-        android:layout_width="wrap_content"
+        android:background="#FF5722"
+        android:textColor="@android:color/white"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:text="Sign_up"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.532"
-        app:layout_constraintStart_toStartOf="@+id/Log_in"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.893" />
-
-    <ImageButton
-        android:id="@+id/WeChat_Login_api"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        app:srcCompat="@android:drawable/bottom_bar"
-
-        />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:text="注册"
+        android:textSize="20sp"
+       />
+    </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

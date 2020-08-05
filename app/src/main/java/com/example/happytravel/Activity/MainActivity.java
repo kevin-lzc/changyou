@@ -11,15 +11,15 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.happytravel.BlankFragment;
+import com.example.happytravel.bean.Datas;
 import com.example.happytravel.adapters.ListViewAdapter;
 
 
 import com.example.happytravel.R;
-import com.example.happytravel.fragment.main_fragment;
-import com.example.happytravel.fragment.mycenter_fragment;
-import com.example.happytravel.fragment.order_fragment;
-import com.example.happytravel.fragment.travel_photo_fragment;
+import com.example.happytravel.fragment.jouneyphoto_fragmet;
+import com.example.happytravel.fragment.mainPageFragment;
+import com.example.happytravel.fragment.myCenterFragment;
+import com.example.happytravel.fragment.orderFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,11 +33,11 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Fragment> mFragments;
     private FragmentPagerAdapter mAdapter;
-    private ListViewAdapter mAdapter1;
-    private main_fragment mMainFragment;
-    private mycenter_fragment mMycenterFragment;
-    private travel_photo_fragment mTravelPhotoFragment;
-    private order_fragment mOrderFragment;
+    private mainPageFragment mMainPageFragment;
+    private jouneyphoto_fragmet mJouneyphoto_fragmet;
+    private orderFragment mOrderFragment;
+    private myCenterFragment mMyCenterFragment;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initView();
         initListener();
-        mList=this.findViewById(R.id.recycler_view);
+        mList=(RecyclerView) this.findViewById(R.id.recycler_view);
 //        initData();
     }
     /**模拟数据*/
@@ -59,28 +59,30 @@ public class MainActivity extends AppCompatActivity {
 //            data.title="我是第"+i+"条";
 //            mData.add(data);
 //        }
-//        ListViewAdapter mAdapter1= new ListViewAdapter(mData);
-//        mList.setAdapter(mAdapter1);
+//        ListViewAdapter adapter=new ListViewAdapter(mData);
+//        mList.setAdapter(adapter);
 //    }
 
     private void initListener() {
 
     }
 
+
     private void initView() {
         // find view
         mViewPager = findViewById(R.id.fragment_vp);
         mTabRadioGroup = findViewById(R.id.tabs_rg);
-        mMainFragment = new main_fragment();
-        mMycenterFragment = new mycenter_fragment();
-        mTravelPhotoFragment = new travel_photo_fragment();
-        mOrderFragment = new order_fragment();
         // init fragment
+
+        mMainPageFragment = new mainPageFragment();
+        mJouneyphoto_fragmet = new jouneyphoto_fragmet();
+        mOrderFragment = new orderFragment();
+        mMyCenterFragment = new myCenterFragment();
         mFragments = new ArrayList<>(4);
-        mFragments.add(mMainFragment);
-        mFragments.add(mTravelPhotoFragment);
+        mFragments.add(mMainPageFragment);
+        mFragments.add(mJouneyphoto_fragmet);
         mFragments.add(mOrderFragment);
-        mFragments.add(mMycenterFragment);
+        mFragments.add(mMyCenterFragment);
         // init view pager
         mAdapter = new MyFragmentPagerAdapter(getSupportFragmentManager(), mFragments);
         mViewPager.setAdapter(mAdapter);
@@ -89,6 +91,9 @@ public class MainActivity extends AppCompatActivity {
         mTabRadioGroup.setOnCheckedChangeListener(mOnCheckedChangeListener);
 
     }
+
+
+
 
     @Override
     protected void onDestroy() {
@@ -125,7 +130,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
-
     private class MyFragmentPagerAdapter extends FragmentPagerAdapter {
 
         private List<Fragment> mList;
@@ -134,17 +138,13 @@ public class MainActivity extends AppCompatActivity {
             super(fm);
             this.mList = list;
         }
-
         @Override
         public Fragment getItem(int position) {
             return this.mList == null ? null : this.mList.get(position);
         }
-
         @Override
         public int getCount() {
             return this.mList == null ? 0 : this.mList.size();
         }
     }
-
-
 }
