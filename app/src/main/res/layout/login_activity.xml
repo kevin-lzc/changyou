@@ -5,7 +5,15 @@
     android:layout_height="match_parent"
 
     >
+
+    <Button
+        android:id="@+id/login_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@mipmap/back_black" />
+
     <TextView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="35sp"
@@ -30,6 +38,9 @@
             android:background="@drawable/register_tel_bg"
             >
             <EditText
+                android:layout_centerHorizontal="true"
+
+                android:id="@+id/login_username"
                 android:layout_width="300dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
@@ -39,7 +50,6 @@
                 android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
                 />
 
-
         </LinearLayout>
         <LinearLayout
             android:id="@+id/password"
@@ -48,11 +58,13 @@
             android:orientation="horizontal"
             android:layout_marginTop="20dp"
             android:background="@drawable/register_tel_bg"
+
             >
 
 
-
             <EditText
+                android:layout_centerHorizontal="true"
+                android:id="@+id/login_password"
                 android:layout_width="300dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="5dp"
@@ -70,10 +82,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginRight="7dp">
-
-            <TextView
-                android:id="@+id/forget_password"
-                android:layout_width="100dp"
+            <Button
+                android:id="@+id/login_forget_password"
+                android:layout_width="91dp"
                 android:layout_height="50dp"
                 android:layout_gravity="bottom"
                 android:layout_marginLeft="250dp"
@@ -83,7 +94,8 @@
         </LinearLayout>
 
             <Button
-                android:id="@+id/loginPage_login"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/login_button"
                 android:layout_width="350dp"
                 android:layout_height="40dp"
                 android:layout_marginTop="5dp"
@@ -91,7 +103,6 @@
                 android:text="登录"
                 />
     </LinearLayout>
-
 
 
 </RelativeLayout>

@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
+    android:id="@+id/register_top"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
     >
-    <ImageView
-        android:layout_width="37dp"
-        android:layout_height="37dp"
-        android:src="@mipmap/back_black"/>
+
+    <Button
+        android:id="@+id/register_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@mipmap/back_black" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -20,6 +23,7 @@
         android:textStyle="normal" />
 
     <TextView
+        android:id="@+id/register_activity_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="35sp"
@@ -29,14 +33,19 @@
         android:textColor="#020202"
         android:text="输入手机号"/>
     <LinearLayout
+        android:id="@+id/register_body"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="220dp"
         android:layout_centerHorizontal="true"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        
+
+        >
 
 
             <EditText
+                android:id="@+id/register_username"
                 android:layout_width="300dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="25dp"
@@ -47,6 +56,7 @@
                 />
 
             <EditText
+                android:id="@+id/register_password1"
                 android:layout_marginTop="40dp"
                 android:layout_width="300dp"
                 android:layout_height="match_parent"
@@ -58,6 +68,7 @@
                 />
 
             <EditText
+                android:id="@+id/register_password2"
                 android:layout_marginTop="40dp"
                 android:layout_width="300dp"
                 android:layout_height="match_parent"
@@ -70,6 +81,7 @@
 
 
         <Button
+            android:id="@+id/register_button"
             android:layout_width="350dp"
             android:layout_height="40dp"
             android:layout_marginTop="40dp"
@@ -88,6 +100,7 @@
 
 
         <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/register_agree"
             android:layout_width="30dp"
             android:layout_height="40dp"
             />

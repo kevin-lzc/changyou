@@ -7,15 +7,16 @@
     android:layout_height="match_parent"
 
     android:id="@+id/drawer_layout"
-    tools:context=".MainActivity">
+    tools:context=".Activity.MainActivity">
 
     <LinearLayout
+        android:id="@+id/jp_item"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:background="@drawable/style_item"
         android:orientation="vertical"
+        android:clickable="true"
         >
-
 
         <ImageView
             android:id="@+id/jp"

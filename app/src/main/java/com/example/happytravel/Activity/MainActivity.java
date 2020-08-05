@@ -10,10 +10,15 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.example.happytravel.BlankFragment;
 import com.example.happytravel.bean.Datas;
 import com.example.happytravel.adapters.ListViewAdapter;
+import com.example.happytravel.adapters.StaggerAdapter;
+import com.example.happytravel.bean.ItemBean;
 
 
 import com.example.happytravel.R;
@@ -62,6 +67,19 @@ public class MainActivity extends AppCompatActivity {
 //        ListViewAdapter adapter=new ListViewAdapter(mData);
 //        mList.setAdapter(adapter);
 //    }
+    private void initData(){
+        List<ItemBean> mData = new ArrayList<>();
+
+        for(int i = 0; i< Datas.icons.length; i++){
+            ItemBean data=new ItemBean();
+            data.icon=Datas.icons[i];
+            mData.add(data);
+        }
+        LinearLayoutManager layoutManager=new LinearLayoutManager(this);
+      mList.setLayoutManager(layoutManager);
+        ListViewAdapter adapter=new ListViewAdapter(mData);
+        mList.setAdapter(adapter);
+    }
 
     private void initListener() {
     }
@@ -90,7 +108,14 @@ public class MainActivity extends AppCompatActivity {
         mTabRadioGroup.setOnCheckedChangeListener(mOnCheckedChangeListener);
 
     }
-
+private void showStagger(boolean isVertical,boolean isReverse){
+    List<ItemBean> mData = new ArrayList<>();
+    StaggeredGridLayoutManager layoutManager=new StaggeredGridLayoutManager(2,isVertical?StaggeredGridLayoutManager.VERTICAL:StaggeredGridLayoutManager.HORIZONTAL);
+   layoutManager.setReverseLayout(isReverse);
+   mList.setLayoutManager(layoutManager);
+    StaggerAdapter adapter=new StaggerAdapter(mData);
+    mList.setAdapter(adapter);
+    }
 
 
 
