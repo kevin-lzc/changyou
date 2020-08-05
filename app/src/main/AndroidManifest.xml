@@ -17,7 +17,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Launcher">
+        android:theme="@style/AppTheme">
         <activity android:name=".Activity.MainActivity">
         </activity>
         <activity android:name=".Activity.RegisterAndLoginActivity">
@@ -41,12 +41,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.MainPageActivity">
-
-        </activity>
-        <activity android:name=".Activity.ForgetActivity">
-
-        </activity>
         <activity
             android:name=".Activity.baidu_MapActivity"
             android:configChanges="orientation|screenSize"
@@ -63,6 +57,7 @@
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="vSzO30YDcwk7d0HQWjqQieI7vPk64Xms" />
+
 
 
     </application>
