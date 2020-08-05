@@ -5,13 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_centerHorizontal="true"
     >
     <LinearLayout
 
         android:layout_width="match_parent"
         android:layout_height="150dp"
+
         android:id="@+id/my_center1"
-        android:background="@drawable/register_yanzhengma_bg"
+        android:background="#FF5722"
         >
 
         <Button
@@ -23,7 +25,8 @@
             android:layout_marginTop="50dp"
             android:textStyle="normal"
             android:textColor="#ffffff"
-            android:text="登录/注册 "/>
+            android:text="登录/注册 "
+            android:layout_marginStart="20dp" />
         <ImageButton
             android:background="@null"
             android:id="@+id/face"
@@ -36,7 +39,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="parent"
-            />
+            android:layout_marginStart="100dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -46,7 +49,7 @@
         android:layout_height="50dp"
         android:layout_below="@id/my_center1"
         android:background="@drawable/style_item_bottom"
-        >
+        android:layout_marginStart="30dp">
 
         <ImageView
             android:layout_width="45dp"
@@ -54,14 +57,22 @@
             android:src="@mipmap/order">
 
         </ImageView>
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
+            android:layout_gravity="center_vertical"
             android:background="@null"
             android:layout_marginLeft="5dp"
             android:textStyle="normal"
-            android:text="过往订单 "/>
+            android:text="过往订单 "
+            android:layout_marginStart="5dp" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/right"
+            android:layout_marginLeft="150dp"
+            />
 
     </LinearLayout>
 
@@ -72,22 +83,32 @@
         android:layout_height="50dp"
         android:layout_below="@id/my_center2"
         android:background="@drawable/style_item_bottom"
-        >
+        android:layout_marginStart="30dp">
 
         <ImageView
-            android:layout_width="50dp"
+            android:layout_width="45dp"
             android:layout_height="wrap_content"
             android:src="@mipmap/like2">
 
         </ImageView>
-        <Button
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:background="@null"
+            android:layout_gravity="center_vertical"
             android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:text="心愿清单 "
+            android:textSize="20sp"
             android:textStyle="normal"
-            android:text="心愿清单 "/>
+            android:layout_marginStart="5dp" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/right"
+            android:layout_marginLeft="150dp"
+            android:layout_marginStart="150dp" />
+
 
     </LinearLayout>
     <LinearLayout
@@ -96,37 +117,45 @@
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_below="@id/my_center3"
-        android:background="@drawable/style_item_bottom"
-        >
+
+        android:layout_marginStart="30dp">
 
         <ImageView
-            android:layout_width="50dp"
+            android:layout_width="40dp"
             android:layout_height="46dp"
             android:src="@mipmap/aaa111">
 
         </ImageView>
 
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
             android:background="@null"
-            android:textStyle="normal"
-            android:text="我的旅拍"/>
+            android:text="我的旅拍"
+            android:textSize="20sp"
+            android:textStyle="normal" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/right"
+            android:layout_marginLeft="155dp"
+            android:layout_marginStart="155dp" />
 
     </LinearLayout>
 
-    <TextView
+    <View
         android:id="@+id/my_center5"
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:layout_below="@id/my_center4"
-        android:background="@drawable/back_cccccc"
+        android:background="#CCCCCC"
         >
 
 
-    </TextView>
+    </View>
 
     <LinearLayout
         android:id="@+id/my_center6"
@@ -135,7 +164,7 @@
         android:layout_height="50dp"
         android:layout_below="@id/my_center5"
         android:background="@drawable/style_item_bottom"
-        >
+        android:layout_marginStart="30dp">
 
         <ImageView
             android:layout_width="45dp"
@@ -143,14 +172,24 @@
             android:src="@mipmap/language">
 
         </ImageView>
-        <Button
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:layout_gravity="center_vertical"
             android:layout_marginLeft="5dp"
             android:background="@null"
+            android:text="语言设置 "
+            android:textSize="20sp"
             android:textStyle="normal"
-            android:text="语言设置 "/>
+            android:layout_marginStart="5dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/right"
+            android:layout_marginLeft="150dp"
+            />
 
     </LinearLayout>
     <LinearLayout
@@ -168,14 +207,22 @@
             android:src="@mipmap/history">
 
         </ImageView>
-        <Button
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:layout_gravity="center_vertical"
             android:layout_marginLeft="5dp"
-            android:textStyle="normal"
             android:background="@null"
-            android:text="浏览足迹 "/>
+            android:text="浏览足迹 "
+            android:textSize="20sp"
+            android:textStyle="normal" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/right"
+            android:layout_marginLeft="150dp"
+            />
 
     </LinearLayout>
 
@@ -189,20 +236,27 @@
         android:background="@drawable/style_item_bottom">
 
         <ImageView
-            android:layout_width="38dp"
+            android:layout_width="45dp"
             android:layout_height="wrap_content"
             android:src="@mipmap/help">
 
         </ImageView>
 
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_marginLeft="5dp"
+            android:background="@null"
             android:text="帮助中心"
             android:textSize="20sp"
-            android:background="@null"
             android:textStyle="normal" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/right"
+            android:layout_marginLeft="155dp"
+            />
 
     </LinearLayout>
 
@@ -212,23 +266,30 @@
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_below="@id/my_center8"
-        android:background="@drawable/style_item_bottom"
+
         >
 
         <ImageView
-            android:layout_width="38dp"
+            android:layout_width="45dp"
             android:layout_height="wrap_content"
             android:src="@mipmap/ourselves">
 
         </ImageView>
-        <Button
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
             android:layout_marginLeft="5dp"
             android:textStyle="normal"
+            android:layout_gravity="center_vertical"
             android:background="@null"
             android:text="关于我们 "/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/right"
+            android:layout_marginLeft="150dp"
+            />
 
     </LinearLayout>
 
@@ -245,7 +306,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
 
             >
 
@@ -254,16 +315,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:text="对我们的产品有意"
-                android:textSize="30dp" />
+                android:maxLines="4"
+                android:text="对我们的产品有意见或建议？ "
+                android:textSize="24sp" />
 
 
             <Button
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:layout_marginLeft="80dp"
-                android:layout_marginTop="10dp"
+
                 android:layout_toRightOf="@+id/ours1"
                 android:background="@mipmap/close" />
 
@@ -271,24 +331,55 @@
 
 
         </LinearLayout>
-        <TextView
-            android:id="@+id/ours2"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_below="@id/ours"
-            android:layout_marginLeft="20dp"
-            android:text="见或建议？"
-            android:textSize="30dp" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/ours2"
+            android:layout_width="245dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/ours"
             android:layout_marginLeft="20dp"
-            android:text="欢迎随时联系我司CTO"
-            android:textSize="20dp" />
+
+            android:maxLines="4"
+            android:text="欢迎联系我司CTO"
+            android:textSize="20sp" />
 
 
     </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/tabs_rg"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="#dcdcdc"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/home_tab"
+            style="@style/Custom.TabRadioButton"
+            android:checked="true"
+            android:drawableTop="@drawable/ic_home_black_24dp"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/record_tab"
+            style="@style/Custom.TabRadioButton"
+            android:drawableTop="@drawable/ic_home_black_24dp"
+            android:text="旅拍" />
+
+        <RadioButton
+            android:id="@+id/order_tab"
+            style="@style/Custom.TabRadioButton"
+            android:drawableTop="@drawable/ic_home_black_24dp"
+            android:text="订单" />
+
+        <RadioButton
+            android:id="@+id/myaccount_tab"
+            style="@style/Custom.TabRadioButton"
+            android:drawableTop="@drawable/ic_home_black_24dp"
+            android:text="我的" />
+    </RadioGroup>
+
+
+
 
 </RelativeLayout>

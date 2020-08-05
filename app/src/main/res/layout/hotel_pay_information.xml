@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:overScrollMode="never"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/pay_confirm"
+    android:layout_alignParentRight="true"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/hotel_pay_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/hotel_pay_back"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:background="@mipmap/back_black"
+                android:layout_gravity="center_vertical"
+                />
+
+            <TextView
+                android:id="@+id/hotel_pay_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="酒店"
+                android:textColor="@android:color/black"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/hotel_shopping_cart"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:background="@mipmap/buy_car_black" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hotel_pay_calender"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@+id/hotel_pay_top"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/style_item_gray"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <CalendarView
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@null" />
+
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@null"
+                android:gravity="center"
+                android:text="一晚"
+                android:textSize="20sp"
+
+                />
+
+
+            <CalendarView
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@null" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@null"
+                android:text="选择更多房型"
+                android:textColor="#CCCCCC"></Button>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="大床房（无窗）"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="无餐食|大床|2人入住|12㎡|无窗|可吸烟|"
+            android:textSize="15dp"></TextView>
+
+        <View
+            android:layout_width="390dp"
+            android:layout_height="3px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/yes">
+
+
+            </ImageView>
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="7月27日前可免费取消"
+                android:textColor="#66CC66"
+                android:textSize="17dp"></TextView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+<LinearLayout
+    android:id="@+id/hotel_order_warning"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_below="@+id/hotel_pay_calender"
+    android:orientation="vertical"
+    android:background="@drawable/style_item_gray_3"
+    >
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="50dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/tips"
+        ></ImageView>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:textSize="30sp"
+    android:text="订房须知"
+    >
+
+</TextView>
+
+
+</LinearLayout>
+
+<TextView
+    android:textSize="15sp"
+    android:layout_marginLeft="30dp"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="该价格仅适用于持有大陆身份证的客人"
+    ></TextView>
+
+    <TextView
+        android:textSize="15sp"
+        android:layout_marginLeft="30dp"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="儿童及加房服务请咨询酒店客服"
+        ></TextView>
+
+</LinearLayout>
+
+<LinearLayout
+    android:id="@+id/hotel_pay_information"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:background="@drawable/style_item_gray_3"
+      android:layout_below="@+id/hotel_order_warning"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:id="@+id/live_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        >
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="入住信息:"
+            android:orientation="vertical"
+            >
+
+        </TextView>
+
+        <EditText
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:hint="请输入账号"
+            android:orientation="vertical">
+
+        </EditText>
+    </LinearLayout>
+
+    <View
+        android:layout_width="340dp"
+        android:layout_height="3px"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:id="@+id/room_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        >
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="房间数："
+            android:orientation="vertical"
+            >
+
+        </TextView>
+
+       <TextView
+           android:layout_marginTop="10dp"
+           android:textSize="20sp"
+           android:layout_marginLeft="15dp"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="1间    每间最多二人"
+           ></TextView>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="340dp"
+        android:layout_height="3px"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray" />
+    <LinearLayout
+        android:id="@+id/guest_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        >
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="旅客姓名:"
+            android:orientation="vertical"
+            >
+
+        </TextView>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:hint="请输入身份证上的名字"
+            android:orientation="vertical">
+
+        </EditText>
+    </LinearLayout>
+
+    <View
+        android:layout_width="340dp"
+        android:layout_height="3px"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray" />
+    <LinearLayout
+        android:id="@+id/hotel_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        >
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="联系电话:"
+            android:orientation="vertical"
+            >
+
+        </TextView>
+
+        <TextView
+            android:layout_marginTop="10dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="+86 |"
+            android:orientation="vertical"
+            ></TextView>
+
+
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+
+            android:orientation="vertical">
+
+        </EditText>
+    </LinearLayout>
+
+    <View
+        android:layout_width="340dp"
+        android:layout_height="3px"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray" />
+    <LinearLayout
+        android:id="@+id/order_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        >
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="预计到店:"
+            android:orientation="vertical"
+            >
+
+        </TextView>
+
+        <Spinner
+            android:layout_marginTop="10dp"
+            android:id="@+id/time_spinner"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/time"
+
+            />
+
+
+
+        <TextView
+            android:layout_marginTop="10dp"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="房间整晚保留"
+            android:orientation="vertical"
+            >
+
+        </TextView>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="340dp"
+        android:layout_height="3px"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray" />
+</LinearLayout>
+    <LinearLayout
+
+        android:layout_height="100dp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/hotel_pay_information"
+        android:background="@drawable/style_item_gray_3"
+        >
+        <TextView
+
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:text="总额："
+            android:textSize="15sp"
+            android:textColor="@android:color/holo_red_light"
+            ></TextView>
+        <TextView
+            android:layout_gravity="center_vertical"
+
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:text="¥ ？？？"
+            android:textSize="25sp"
+            android:textColor="@android:color/holo_red_light"
+            ></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="咨询："
+            android:textSize="15sp"></TextView>
+
+        <Button
+
+            android:id="@+id/hotel_pay_help"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:background="@mipmap/help"></Button>
+
+        <Button
+
+            android:layout_marginLeft="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:id="@+id/hotel_pay"
+            android:background="@drawable/register_yanzhengma_bg"
+            android:textColor="#FFFFFF"
+            android:text="去支付"
+            ></Button>
+    </LinearLayout>
+
+</RelativeLayout>
+</ScrollView>

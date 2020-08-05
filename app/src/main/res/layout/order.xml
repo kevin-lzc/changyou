@@ -8,13 +8,14 @@
     >
 
     <ImageView
+        android:layout_centerHorizontal="true"
         android:layout_width="300dp"
         android:layout_height="400dp"
-        android:layout_marginLeft="50dp"
         android:layout_marginTop="50dp"
         android:src="@mipmap/my_order" />
 
     <TextView
+        android:layout_centerHorizontal="true"
         android:id="@id/order"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,18 +26,15 @@
         android:layout_marginTop="500dp"
         android:text="我的订单"/>
 
-    <LinearLayout
-        android:layout_width="500dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:orientation="vertical"
-        android:layout_below="@id/order"
-        >
+
 
 
         <Button
+            android:id="@+id/order_login"
+            android:layout_below="@id/order"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:layout_gravity="bottom"
             android:layout_marginLeft="150dp"
             android:background="@null"
@@ -44,6 +42,9 @@
             android:textSize="15dp" />
 
         <Button
+            android:id="@+id/enter_now"
+            android:layout_below="@id/order_login"
+            android:layout_centerHorizontal="true"
             android:layout_width="350dp"
             android:layout_height="40dp"
             android:layout_marginLeft="30dp"
@@ -52,7 +53,7 @@
             android:text="现在就去"
 
             />
-    </LinearLayout>
+
     <RadioGroup
         android:id="@+id/tabs_rg"
         android:layout_width="match_parent"

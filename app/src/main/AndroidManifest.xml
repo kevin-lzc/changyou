@@ -40,6 +40,12 @@
         <activity android:name=".Activity.DestinationActivity">
 
         </activity>
+        <activity android:name=".Activity.MainPageActivity">
+
+        </activity>
+        <activity android:name=".Activity.ForgetActivity">
+
+        </activity>
 
 
     </application>
