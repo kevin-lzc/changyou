@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.happytravel.BlankFragment;
 import com.example.happytravel.bean.Datas;
 import com.example.happytravel.adapters.ListViewAdapter;
 
@@ -38,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
     private orderFragment mOrderFragment;
     private myCenterFragment mMyCenterFragment;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
 //    }
 
     private void initListener() {
-
     }
 
 
