@@ -127,7 +127,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
-
     private class MyFragmentPagerAdapter extends FragmentPagerAdapter {
 
         private List<Fragment> mList;
@@ -136,16 +135,13 @@ public class MainActivity extends AppCompatActivity {
             super(fm);
             this.mList = list;
         }
-
         @Override
         public Fragment getItem(int position) {
             return this.mList == null ? null : this.mList.get(position);
         }
-
         @Override
         public int getCount() {
             return this.mList == null ? 0 : this.mList.size();
         }
     }
-
 }

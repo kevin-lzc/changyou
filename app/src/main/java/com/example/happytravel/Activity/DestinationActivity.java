@@ -4,6 +4,9 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +34,7 @@ public class DestinationActivity extends AppCompatActivity {
     private MagicIndicator mMagicIndicator;
     private ViewPager mViewPager;
     private MyAdapter myAdapter;
+    private ImageView mDestination_back_btn;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,10 +42,21 @@ public class DestinationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.destination_page);
         initView();
+        initListener();
         initMagicIndicator();
     }
 
+    private void initListener() {
+        mDestination_back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
+
     private void initView() {
+        mDestination_back_btn = this.findViewById(R.id.destination_back_btn);
         mMagicIndicator = this.findViewById(R.id.MagicIndicator);
         mViewPager = this.findViewById(R.id.ViewPager);
         myAdapter = new MyAdapter(getSupportFragmentManager());
@@ -108,8 +123,6 @@ public class DestinationActivity extends AppCompatActivity {
         ViewPagerHelper.bind(mMagicIndicator, mViewPager);
         return null;
     }
-
-
             private class MyAdapter extends FragmentPagerAdapter {
                 public MyAdapter(FragmentManager fm) {
                     super(fm);

@@ -19,16 +19,17 @@
             android:id="@+id/main_search_btn"
             android:layout_alignParentRight="true"
             android:layout_marginRight="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/search_white"
+            android:layout_gravity="center_vertical"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/search_black"
            />
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:layout_alignParentRight="true"
             android:layout_toRightOf="@+id/main_search_btn"
-            android:src="@mipmap/buycar_white"
+            android:src="@mipmap/buy_car_black"
             />
     </LinearLayout>
 
@@ -40,6 +41,7 @@
         android:layout_height="wrap_content"
         >
     <androidx.viewpager.widget.ViewPager
+        android:id="@+id/main_page_looper"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         >
@@ -60,6 +62,7 @@
         android:text="热门景点"
         />
     <TextView
+        android:id="@+id/lookMore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -71,6 +74,7 @@
     </RelativeLayout>
 <!--热门景点-->
           <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/hot_jingdian_recycleView"
               android:layout_marginTop="10dp"
               android:layout_width="match_parent"
               android:layout_height="250dp"
@@ -95,6 +99,7 @@
     </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hot_jingdian_project"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_marginTop="10dp"
@@ -120,6 +125,7 @@
 
 
         <Button
+            android:id="@+id/mainPage_goto_login"
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:layout_marginLeft="152dp"
@@ -130,7 +136,6 @@
             android:textSize="20sp">
 
         </Button>
-
     </LinearLayout>
 </LinearLayout>
 </ScrollView>
