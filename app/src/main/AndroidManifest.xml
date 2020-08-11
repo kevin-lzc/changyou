@@ -13,21 +13,31 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/applogo"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:targetApi="n"
+        android:name=".Global_Variable">
         <activity android:name=".Activity.MainActivity">
+
         </activity>
         <activity android:name=".Activity.RegisterAndLoginActivity">
         </activity>
         <activity android:name=".Activity.RegisterActivity">
         </activity>
+        <activity android:name=".Activity.jp_se2">
+
+        </activity>
         <activity android:name=".Activity.LoginActivity">
         </activity>
         <activity android:name=".Activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".Activity.TestActivity">
         </activity>
@@ -35,11 +45,7 @@
         </activity>
 
         <activity android:name=".baidu_MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Activity.baidu_MapActivity"
@@ -49,7 +55,26 @@
             android:name=".Activity.baidu_SearchPlaceActivity"
             android:configChanges="orientation|screenSize"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.jingdian_item_Activity"
+            >
+        </activity>
+        <activity android:name=".Activity.hotel_item_activity">
+        </activity>
+        <activity android:name=".Activity.hotel_pay_activity">
 
+        </activity>
+        <activity android:name=".Activity.pay_finish_activity">
+
+        </activity>
+        <activity android:name=".Activity.jingdian_pay_activity">
+
+        </activity>
+        <activity android:name=".Activity.orderactivity">
+
+        </activity>
+        <activity android:name=".Activity.history_activity">
+
+        </activity>
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"

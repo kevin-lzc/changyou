@@ -5,6 +5,7 @@
     android:layout_height="150dp">
 
     <ImageView
+        android:id="@+id/Imag_jingdian"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:src="@mipmap/ic_launcher"
@@ -12,6 +13,7 @@
         >
     </ImageView>
     <TextView
+        android:id="@+id/city_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="城市名称"

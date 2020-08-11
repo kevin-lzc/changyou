@@ -1,5 +1,6 @@
 package com.example.happytravel.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -8,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -30,6 +32,9 @@ import com.example.happytravel.fragment.orderFragment;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG="MainActivity";
@@ -43,47 +48,43 @@ public class MainActivity extends AppCompatActivity {
     private jouneyphoto_fragmet mJouneyphoto_fragmet;
     private orderFragment mOrderFragment;
     private myCenterFragment mMyCenterFragment;
+    boolean flag_login=false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTheme(R.style.AppTheme);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
         initView();
         initListener();
-        mList=(RecyclerView) this.findViewById(R.id.recycler_view);
-//        initData();
+        mList=this.findViewById(R.id.recycler_view);
     }
-    /**模拟数据*/
-//    private void initData(){
-//        List<ItemBean> mData = new ArrayList<>();
-//
-//        for(int i = 0; i< Datas.icons.length; i++){
-//            ItemBean data=new ItemBean();
-//            data.icon=Datas.icons[i];
-//            data.title="我是第"+i+"条";
-//            mData.add(data);
-//        }
-//        ListViewAdapter adapter=new ListViewAdapter(mData);
-//        mList.setAdapter(adapter);
-//    }
-    private void initData(){
-        List<ItemBean> mData = new ArrayList<>();
 
-        for(int i = 0; i< Datas.icons.length; i++){
-            ItemBean data=new ItemBean();
-            data.icon=Datas.icons[i];
-            mData.add(data);
-        }
-        LinearLayoutManager layoutManager=new LinearLayoutManager(this);
-      mList.setLayoutManager(layoutManager);
-        ListViewAdapter adapter=new ListViewAdapter(mData);
-        mList.setAdapter(adapter);
-    }
+
 
     private void initListener() {
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Intent intent = getIntent();
+        String fragid = intent.getStringExtra("fragid");
+        if (fragid!=null){
+            if(fragid.equals("1")){
+                FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_vp, new mainPageFragment());
+                fragmentTransaction.commit();
+            }
+        }
+    }
 
     private void initView() {
         // find view
@@ -108,14 +109,7 @@ public class MainActivity extends AppCompatActivity {
         mTabRadioGroup.setOnCheckedChangeListener(mOnCheckedChangeListener);
 
     }
-private void showStagger(boolean isVertical,boolean isReverse){
-    List<ItemBean> mData = new ArrayList<>();
-    StaggeredGridLayoutManager layoutManager=new StaggeredGridLayoutManager(2,isVertical?StaggeredGridLayoutManager.VERTICAL:StaggeredGridLayoutManager.HORIZONTAL);
-   layoutManager.setReverseLayout(isReverse);
-   mList.setLayoutManager(layoutManager);
-    StaggerAdapter adapter=new StaggerAdapter(mData);
-    mList.setAdapter(adapter);
-    }
+
 
 
 

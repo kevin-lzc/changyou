@@ -1,5 +1,6 @@
 package com.example.happytravel.Activity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -111,6 +112,7 @@ public class baidu_SearchPlaceActivity extends AppCompatActivity {
         mRecyclerViewResult.addItemDecoration(dividerItemDecoration);
         mRecyclerViewResult.setAdapter(mBaiduPlaceSugAdapter);
         mBaiduPlaceSugAdapter.setOnItemClickListener(new baidu_PlaceSugAdapter.OnItemClickListener() {
+            @SuppressLint("LongLogTag")
             @Override
             public void onItemClick(View view, int position) {
                 Log.d(TAG, "Result onItemClick, position: " + position);
@@ -123,6 +125,7 @@ public class baidu_SearchPlaceActivity extends AppCompatActivity {
      * @param resultBean 百度位置信息
      *                   返回到MapActivity
      */
+    @SuppressLint("LongLogTag")
     private void backToMapActivity(BaiduPlaceSugBean.ResultBean resultBean) {
         Intent data = new Intent();
         data.putExtra(baidu_SearchPlaceConstant.EXTRA_LATITUDE, resultBean.getLocation().getLat());
@@ -164,6 +167,7 @@ public class baidu_SearchPlaceActivity extends AppCompatActivity {
      *
      * @param keyword 关键词
      */
+    @SuppressLint("LongLogTag")
     private void doPlaceSearch(String keyword) {
         if (TextUtils.isEmpty(keyword)) {
             Toast.makeText(this,

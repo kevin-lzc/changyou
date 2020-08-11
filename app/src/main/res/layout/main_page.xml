@@ -38,29 +38,64 @@
 <!--轮播图-->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="400dp"
         >
-    <androidx.viewpager.widget.ViewPager
+    <com.example.happytravel.utils.MyViewPager
         android:id="@+id/main_page_looper"
         android:layout_width="match_parent"
         android:layout_height="400dp"
-        >
-    </androidx.viewpager.widget.ViewPager>
+    />
+        <TextView
+            android:id="@+id/text_looper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="北京"
+            android:layout_alignParentBottom="true"
+            android:textSize="35sp"
+            android:textColor="@android:color/white"
+            />
+<!--        <LinearLayout-->
+<!--            android:id="@+id/points_container"-->
+<!--            android:layout_marginBottom="40px"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            >-->
+<!--            <View-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:background="@drawable/shape_point_select"-->
+<!--                />-->
+<!--            <View-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_marginLeft="40px"-->
+<!--                android:background="@drawable/shape_point_select"-->
+<!--                />-->
+<!--            <View-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_marginLeft="40px"-->
+<!--                android:background="@drawable/shape_point_select"-->
+<!--                />-->
+<!--        </LinearLayout>-->
+
     </RelativeLayout>
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:text="热门景点"
-        />
     <RelativeLayout
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:textSize="25sp"
+            android:text="热门景点"
+            />
         <TextView
             android:id="@+id/look_more"
         android:layout_width="wrap_content"
@@ -80,36 +115,33 @@
               android:layout_height="250dp"
               >
           </androidx.recyclerview.widget.RecyclerView>
-
 <!--热门项目体验-->
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="热门项目体验"
-            android:textSize="25sp"
-            android:paddingLeft="10dp"
-            >
-        </TextView>
-    </RelativeLayout>
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              >
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="热门项目体验"
+                  android:textSize="25sp"
+                  android:paddingLeft="10dp"
+                  >
+              </TextView>
+          </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/hot_jingdian_project"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         >
-
     </androidx.recyclerview.widget.RecyclerView>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:background="#8F8F8F"
         android:orientation="vertical"
         >
@@ -129,7 +161,7 @@
             android:layout_width="100dp"
             android:layout_height="40dp"
             android:layout_marginLeft="152dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:text="现在就去"
             android:gravity="center"
             android:background="@drawable/set_press_yanzhengma_bg"

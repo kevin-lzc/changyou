@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 import java.util.ArrayList;
 
+import com.example.happytravel.Global_Variable;
 import com.example.happytravel.R;
 import com.example.happytravel.register.OpenHelper;
 import com.example.happytravel.register.User;
@@ -81,6 +82,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     if (match) {
                         Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(this, MainActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        ((Global_Variable)getApplication()).setflag_login(true);
                         startActivity(intent);
                         finish();//销毁此Activity
                     } else {

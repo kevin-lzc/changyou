@@ -473,7 +473,6 @@
             android:background="@mipmap/help"></Button>
 
         <Button
-
             android:layout_marginLeft="25dp"
             android:layout_gravity="center_vertical"
             android:layout_width="120dp"
@@ -481,8 +480,7 @@
             android:id="@+id/hotel_pay"
             android:background="@drawable/register_yanzhengma_bg"
             android:textColor="#FFFFFF"
-            android:text="去支付"
-            ></Button>
+            android:text="去支付" />
     </LinearLayout>
 
 </RelativeLayout>

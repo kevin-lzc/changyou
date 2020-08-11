@@ -1,6 +1,7 @@
 package com.example.happytravel.Activity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -29,24 +30,36 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.indicators.Be
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.CommonPagerTitleView;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.SimplePagerTitleView;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class DestinationActivity extends AppCompatActivity {
     private String title[] = new String[]{"景点", "酒店"};
     private MagicIndicator mMagicIndicator;
     private ViewPager mViewPager;
     private MyAdapter myAdapter;
     private ImageView mDestination_back_btn;
-
+    @BindView(R.id.search_btn)
+      public ImageView DestinationSearchBtn;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.destination_page);
+        ButterKnife.bind(this);
         initView();
         initListener();
         initMagicIndicator();
     }
 
     private void initListener() {
+        DestinationSearchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(DestinationActivity.this,baidu_MapActivity.class);
+                startActivity(intent);
+            }
+        });
         mDestination_back_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
