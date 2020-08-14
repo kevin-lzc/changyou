@@ -61,32 +61,15 @@ public class fragment_hotel extends Fragment {
     }
     private void initData() {
         for (int i = 0; i < 2; i++) {
-            jpBean apple = new jpBean("Apple", R.mipmap.bengjing1);
+            jpBean apple = new jpBean("北京金沙酒店", R.mipmap.hotel1);
             fruitList.add(apple);
-            jpBean banana = new jpBean("Banana", R.mipmap.bengjing1);
+            jpBean banana = new jpBean("北京橄榄绿酒店", R.mipmap.hotel2);
             fruitList.add(banana);
-            jpBean orange = new jpBean("Orange", R.mipmap.bengjing1);
+            jpBean orange = new jpBean("拉萨蔚来酒店", R.mipmap.weilaihotel);
             fruitList.add(orange);
-            jpBean watermelon = new jpBean("Watermelon",R.mipmap.bengjing1);
+            jpBean watermelon = new jpBean("平康错酒店",R.mipmap.hotel_lasa);
             fruitList.add(watermelon);
-            jpBean pear = new jpBean("Pear",R.mipmap.bengjing1);
-            fruitList.add(pear);
-            jpBean grape = new jpBean("Grape", R.mipmap.bengjing1);
-            fruitList.add(grape);
-            jpBean pineapple = new jpBean("Pineapple", R.mipmap.bengjing1);
-            fruitList.add(pineapple);
-            jpBean strawberry = new jpBean("Strawberry", R.mipmap.bengjing1);
-            fruitList.add(strawberry);
-            jpBean cherry = new jpBean("Cherry", R.mipmap.bengjing1);
-            fruitList.add(cherry);
-            jpBean mango = new jpBean("Mango", R.mipmap.bengjing1);
-            fruitList.add(mango);
-            jpBean mang = new jpBean("Mango", R.mipmap.bengjing1);
-            fruitList.add(mango);
-            jpBean man = new jpBean("Mango", R.mipmap.bengjing1);
-            fruitList.add(mango);
-            jpBean mngo = new jpBean("Mango", R.mipmap.bengjing1);
-            fruitList.add(mango);
+
         }
     }
 }

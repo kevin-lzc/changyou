@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         >
         <ImageView
+            android:id="@+id/goback"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:src="@mipmap/back_black"
@@ -21,7 +22,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="350dp"
-            android:src="@mipmap/bengjing1"
+            android:src="@mipmap/bjtiantan"
            />
 
     </RelativeLayout>
@@ -29,7 +30,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="香港迪士尼"
+            android:text="北京天坛"
             android:layout_marginLeft="10dp"
             android:textSize="35sp"
             android:textStyle="bold"
@@ -273,12 +274,14 @@
                 android:background="@drawable/like_click"
                 />
             <Button
+                android:id="@+id/add_order"
                 android:layout_width="140dp"
                 android:layout_height="match_parent"
                 android:text="添加到订单"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:gravity="center"
                 android:background="#FFA628"
+                android:textColor="@android:color/white"
                 android:textSize="25sp"
                 />
             <Button
@@ -288,6 +291,7 @@
                 android:text="现在预订"
                 android:layout_marginLeft="20dp"
                 android:textSize="25sp"
+                android:textColor="@android:color/white"
                 android:background="#FF5722"
                 android:gravity="center"
                 />

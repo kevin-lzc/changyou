@@ -13,6 +13,7 @@ import com.example.happytravel.R;
 public class jingdian_pay_activity extends AppCompatActivity {
 
     private Button mJingdian_pay;
+    private Button mBackto;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,11 +46,17 @@ public class jingdian_pay_activity extends AppCompatActivity {
                 customDialog.show();
             }
         });
+        mBackto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void initView() {
         mJingdian_pay = this.findViewById(R.id.view_pay);
-
+        mBackto = this.findViewById(R.id.view_pay_back);
     }
 }
 

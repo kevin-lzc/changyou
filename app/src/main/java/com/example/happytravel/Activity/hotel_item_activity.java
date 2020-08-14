@@ -1,7 +1,10 @@
 package com.example.happytravel.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +22,8 @@ public class hotel_item_activity extends AppCompatActivity {
     private List<jpBean> fruitList = new ArrayList<>();
     private RecyclerView mHotel_chose_recyclerView;
     private hotel_chose_adapter mHotel_chose_adapter;
+    private LinearLayout mHotel_goto_baidu;
+    private ImageView mBack;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -31,9 +36,24 @@ public class hotel_item_activity extends AppCompatActivity {
 
     private void initListener() {
 
+        mBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        mHotel_goto_baidu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(hotel_item_activity.this,baidu_SearchPlaceActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initView() {
+        mBack = this.findViewById(R.id.back_to_last);
+        mHotel_goto_baidu = this.findViewById(R.id.hotel_goto_baidu);
         mHotel_chose_recyclerView = this.findViewById(R.id.hotel_chose_recyclerView);
         mHotel_chose_recyclerView.setLayoutManager(new LinearLayoutManager(this));
         mHotel_chose_adapter = new hotel_chose_adapter(fruitList);

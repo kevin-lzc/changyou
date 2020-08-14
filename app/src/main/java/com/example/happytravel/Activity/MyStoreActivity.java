@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +32,7 @@ public class MyStoreActivity extends AppCompatActivity {
     private MagicIndicator mMagicIndicator;
     private ViewPager mViewPager;
     private MyStoreActivity.MyAdapter myAdapter;
+    private ImageView mBackBtn;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,12 +40,22 @@ public class MyStoreActivity extends AppCompatActivity {
         setTheme(R.style.AppTheme);
          setContentView(R.layout.mystore);
          initView();
+         initListener();
         initMagicIndicator();
     }
 
+    private void initListener() {
+        mBackBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+    }
 
 
     private void initView() {
+        mBackBtn = this.findViewById(R.id.back_to);
         mMagicIndicator = this.findViewById(R.id.MagicIndicator);
         mViewPager = this.findViewById(R.id.ViewPager);
         myAdapter = new MyAdapter(getSupportFragmentManager());

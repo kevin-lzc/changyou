@@ -66,6 +66,10 @@ public class baidu_SearchPlaceActivity extends AppCompatActivity {
 
     private ProgressDialog mDialog;
     private LatLng mCurrentLatLng;
+    private double mDes_lat;
+    private double mDes_lng;
+    private BaiduPlaceSugBean.ResultBean.LocationBean mLocationlatlng;
+    private String mDes_name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,7 +138,6 @@ public class baidu_SearchPlaceActivity extends AppCompatActivity {
         Log.d(TAG, "backToGisActivity:"
                 + "\nlatitude: " + resultBean.getLocation().getLat()
                 + "\nlongitude: " + resultBean.getLocation().getLng());
-
         finish();
     }
 

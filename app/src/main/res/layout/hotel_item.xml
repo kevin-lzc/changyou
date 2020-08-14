@@ -9,11 +9,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-    <View
+        <ImageView
+            android:id="@+id/back_to_last"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/back_black">
+
+        </ImageView>
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="400dp"
+        android:src="@mipmap/hotel2"
         >
-    </View>
+    </ImageView>
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -27,10 +35,11 @@
        <TextView
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:text="酒店名字，位置"
-           android:textSize="25sp"
+           android:text="北京饭店"
+           android:textSize="35sp"
         />
         <LinearLayout
+            android:id="@+id/hotel_goto_baidu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -49,7 +58,6 @@
             android:layout_height="wrap_content"
             android:text="地图/导航"
             android:textSize="15sp"
-
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true" />
         </LinearLayout>
@@ -125,57 +133,56 @@
             />
 
     </LinearLayout>
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="100dp"
-android:orientation="horizontal"
-           >
-           <LinearLayout
-               android:layout_width="150dp"
-               android:layout_height="80dp"
-               android:orientation="vertical"
-               >
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:text="入住时间"
-                   android:textSize="20sp"
-                   />
 
-               <CalendarView
-                   android:layout_width="match_parent"
-                   android:layout_height="46dp" />
-           </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal">
 
-           <TextView
-               android:layout_width="70dp"
-               android:layout_height="40dp"
-               android:layout_marginLeft="23dp"
-               android:text="共一晚"
-               android:gravity="center"
-               android:textSize="20sp"
-               android:layout_gravity="center_vertical"
-               />
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:orientation="vertical">
 
-           <LinearLayout
-               android:layout_width="150dp"
-               android:layout_marginLeft="19dp"
-               android:layout_height="80dp"
-               android:orientation="vertical"
-               >
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginLeft="69dp"
-                   android:text="入住时间"
-                   android:textSize="20sp"
-                   />
-               <CalendarView
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                   />
-           </LinearLayout>
-       </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="入住时间"
+                    android:textSize="20sp" />
+
+                <CalendarView
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="23dp"
+                android:gravity="center"
+                android:text="共一晚"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="19dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="69dp"
+                    android:text="入住时间"
+                    android:textSize="20sp" />
+
+                <CalendarView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/hotel_chose_recyclerView"
             android:layout_width="match_parent"

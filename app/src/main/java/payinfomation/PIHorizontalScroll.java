@@ -27,7 +27,6 @@ public class PIHorizontalScroll extends Activity{
         setContentView(R.layout.view_pay_information);
         LayoutInflater layoutInflater = (LayoutInflater) this
                 .getSystemService(LAYOUT_INFLATER_SERVICE);
-        gridView = (GridView) findViewById(R.id.grid);
         setData();
         setGridView();
     }

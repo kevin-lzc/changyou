@@ -4,12 +4,15 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.media.MicrophoneInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.example.happytravel.R;
 import com.sina.weibo.sdk.auth.AuthInfo;
@@ -38,14 +41,17 @@ public class RegisterAndLoginActivity extends AppCompatActivity {
     private Button mSign_up;
     private ImageView mWechat_login;
 
+    private VideoView myVideo = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_and_login);
-             initView();
-           initListener();
-            }
+        myVideo = (VideoView) findViewById(R.id.videoView);
+        initView();
+        initListener();
+    }
     private void init_weibo_sdk() {
         //初始化SDK
         AuthInfo authInfo = new AuthInfo(this, APP_KY, REDIRECT_URL, SCOPE);
@@ -87,6 +93,17 @@ public class RegisterAndLoginActivity extends AppCompatActivity {
         mLog_in = this.findViewById(R.id.Log_in);
         mSign_up = this.findViewById(R.id.Sign_up);
         mWechat_login = this.findViewById(R.id.wechat_logo);
+        //播放路径
+        myVideo.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.login_background));
+        //播放
+        myVideo.start();
+        //循环播放
+        myVideo.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                myVideo.start();
+            }
+        });
     }
 
     private void initListener() {

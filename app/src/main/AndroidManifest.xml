@@ -23,6 +23,9 @@
         <activity android:name=".Activity.MainActivity">
 
         </activity>
+        <activity android:name=".Activity.MyStoreActivity">
+
+        </activity>
         <activity android:name=".Activity.RegisterAndLoginActivity">
         </activity>
         <activity android:name=".Activity.RegisterActivity">
@@ -73,6 +76,12 @@
 
         </activity>
         <activity android:name=".Activity.history_activity">
+
+        </activity>
+        <activity android:name=".Activity.ForgetActivity">
+
+        </activity>
+        <activity android:name=".Activity.my_jouney_photo_activity">
 
         </activity>
         <service

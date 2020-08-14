@@ -42,21 +42,20 @@ public class orderFragment extends Fragment {
             //登陆后的界面
             //测试界面
             mView2 = inflater.inflate(R.layout.second_login_order_page, container, false);
+            return mView2;
 
         }
         else {
             //登陆前界面
             mOrderFragment1 = inflater.inflate(R.layout.order, container, false);
-        initView();
-        initListener();
+             initView();
+             initListener();
+            return mOrderFragment1;
+
         }
-        return mOrderFragment1;
     }
 
-
-
     private void initListener() {
-
         mGotoLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -2,6 +2,7 @@ package com.example.happytravel.Activity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -27,6 +28,9 @@ import com.example.happytravel.R;
 import com.example.happytravel.constant.baidu_SearchPlaceConstant;
 import com.example.happytravel.location.baidu_BDLocationManager;
 import com.example.happytravel.utils.baidu_ConverterUtils;
+
+import java.io.File;
+import java.net.URISyntaxException;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -65,6 +69,9 @@ public class baidu_MapActivity extends AppCompatActivity implements
     private LatLng mCurrentLatLng;
     private static final float DEFAULT_ZOOM = 17f;
     private BitmapDescriptor mSearchBd;
+    private double mLatitude;
+    private double mLongitude;
+    private LatLng mGcj02;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +80,7 @@ public class baidu_MapActivity extends AppCompatActivity implements
         setContentView(R.layout.baidu_activity_map);
         ButterKnife.bind(this);
         initMapView();
+       // goto_baiduMap();
         startLocation();
     }
 
@@ -107,9 +115,9 @@ public class baidu_MapActivity extends AppCompatActivity implements
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_CODE_SEARCH) {
             if (resultCode == Activity.RESULT_OK) {
-                double latitude = data.getDoubleExtra(baidu_SearchPlaceConstant.EXTRA_LATITUDE, 0D);
-                double longitude = data.getDoubleExtra(baidu_SearchPlaceConstant.EXTRA_LONGITUDE, 0D);
-                LatLng latLng = new LatLng(latitude, longitude);
+                mLatitude = data.getDoubleExtra(baidu_SearchPlaceConstant.EXTRA_LATITUDE, 0D);
+                mLongitude = data.getDoubleExtra(baidu_SearchPlaceConstant.EXTRA_LONGITUDE, 0D);
+                LatLng latLng = new LatLng(mLatitude, mLongitude);
 
                 Log.d(TAG, "onActivityResult: mLatLng: " + latLng);
                 MapStatus.Builder builder = new MapStatus.Builder();
@@ -164,7 +172,6 @@ public class baidu_MapActivity extends AppCompatActivity implements
         mBaiduMap.setOnMarkerClickListener(this);
 
     }
-
     /**
      * 开始定位
      */
@@ -174,7 +181,6 @@ public class baidu_MapActivity extends AppCompatActivity implements
         baiduBdLocationManager.startLocation();
         baiduBdLocationManager.addLocationCallback(mLocationCallback);
     }
-
     /**
      * 停止定位
      */
@@ -202,15 +208,14 @@ public class baidu_MapActivity extends AppCompatActivity implements
                     bdLocation.getLongitude());
             Log.v(TAG, "onReceiveLocation: mCurrentLatLng: " + mCurrentLatLng);
             LatLng bd09ll = mCurrentLatLng;
-            LatLng gcj02 = baidu_ConverterUtils.BD09LLtoGCJ02(bd09ll);
-            Log.d(TAG, "gcj02: " + gcj02 + ", bd09ll: " + bd09ll);
+            mGcj02 = baidu_ConverterUtils.BD09LLtoGCJ02(bd09ll);
+            Log.d(TAG, "gcj02: " + mGcj02 + ", bd09ll: " + bd09ll);
             if (isFirstLoc) {
                 isFirstLoc = false;
                 locToCurrentPosition(mBaiduMap, mCurrentLatLng, DEFAULT_ZOOM);
             }
         }
     };
-
     /**
      * 定位到当前位置
      */
@@ -225,7 +230,13 @@ public class baidu_MapActivity extends AppCompatActivity implements
     @Override
     public boolean onMarkerClick(Marker marker) {
         Log.d(TAG, "onMarkerClick: marker: " + marker.getPosition());
-        Toast.makeText(this, marker.getPosition().toString(), Toast.LENGTH_LONG).show();
+        try {
+             Intent intent = Intent.getIntent("intent://map/direction?origin=latlng:27.708752199632,107.194026391714|name:遵义大数据中心&destination=重庆北站&mode=drivingion=重庆&referer=Autohome|GasStation#Intent;scheme=bdapp;package=com.baidu.BaiduMap;end");
+                startActivity(intent); //启动调用
+                Log.e("GasStation", "百度地图客户端已经安装") ;
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
         return false;
     }
 }

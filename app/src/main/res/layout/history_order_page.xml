@@ -22,5 +22,81 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@android:color/darker_gray"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:descendantFocusability="blocksDescendants">
 
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/imageView_sight_icon"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="34dp"
+            android:src="@mipmap/bjtiantan"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="北京天坛"
+            android:id="@+id/sight_name"
+            android:textSize="25sp"
+            android:drawableRight="@drawable/ic_baseline_arrow_forward_ios_18"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/transparent"
+            android:theme="@android:style/Theme.Translucent"
+            />
+
+
+        <TextView
+            android:id="@+id/sight_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageView_sight_icon"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="24dp"
+            android:layout_toRightOf="@id/imageView_sight_icon"
+            android:text="有效日期" />
+        <TextView
+            android:layout_below="@+id/sight_date"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/imageView_sight_icon"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="2020.08.15"
+            >
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/sight_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="120dp"
+
+            android:layout_toRightOf="@id/imageView_sight_icon"
+            android:text="价格计算:" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sight_price_total"
+            android:text="￥100"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_toRightOf="@id/sight_price"
+            android:layout_alignBottom="@+id/sight_price"
+            android:layout_marginLeft="10dp"
+            android:textSize="24dp"
+            />
+
+        <TextView
+            android:id="@+id/item_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
 </LinearLayout>

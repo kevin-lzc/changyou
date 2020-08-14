@@ -57,12 +57,12 @@ public class mainPageFragment extends Fragment implements ViewPager.OnPageChange
     static {
         spics.add(R.mipmap.bengjing2);
         spics.add(R.mipmap.bengjing1);
-        spics.add(R.mipmap.bengjing3);
-        spics.add(R.mipmap.lasa2);
-        spics.add(R.mipmap.lasa3);
-        spics.add(R.mipmap.xiamen1);
-        spics.add(R.mipmap.xiamen3);
-        spics.add(R.mipmap.xiamen2);
+        spics.add(R.mipmap.hz1);
+        spics.add(R.mipmap.hz2);
+        spics.add(R.mipmap.cq1);
+        spics.add(R.mipmap.gl);
+        spics.add(R.mipmap.gl2);
+        spics.add(R.mipmap.lasa1);
     }
     private RecyclerView mHot_jingdian_recycleView;
     private hot_jingdian_recycleview_adapter mHot_jingdian_recycleview_adapter;
@@ -149,38 +149,22 @@ public class mainPageFragment extends Fragment implements ViewPager.OnPageChange
 
     private void initData() {
         for (int i = 0; i < 2; i++) {
-            jpBean apple = new jpBean("Apple", R.mipmap.bengjing1);
+            jpBean apple = new jpBean("北京天坛", R.mipmap.bjtiantan);
             fruitList.add(apple);
-            jpBean banana = new jpBean("Banana", R.mipmap.bengjing1);
+            jpBean banana = new jpBean("北京", R.mipmap.beijingwu2);
             fruitList.add(banana);
-            jpBean orange = new jpBean("Orange", R.mipmap.bengjing1);
-            fruitList.add(orange);
-            jpBean watermelon = new jpBean("Watermelon",R.mipmap.bengjing1);
-            fruitList.add(watermelon);
-            jpBean pear = new jpBean("Pear",R.mipmap.bengjing1);
-            fruitList.add(pear);
-            jpBean grape = new jpBean("Grape", R.mipmap.bengjing1);
-            fruitList.add(grape);
-            jpBean pineapple = new jpBean("Pineapple", R.mipmap.bengjing1);
+            jpBean pineapple = new jpBean("拉萨", R.mipmap.lasa3);
             fruitList.add(pineapple);
-            jpBean strawberry = new jpBean("Strawberry", R.mipmap.bengjing1);
-            fruitList.add(strawberry);
-            jpBean cherry = new jpBean("Cherry", R.mipmap.bengjing1);
-            fruitList.add(cherry);
-            jpBean mango = new jpBean("Mango", R.mipmap.bengjing1);
+            jpBean mango = new jpBean("武汉", R.mipmap.wuhan1wu);
             fruitList.add(mango);
-            jpBean mang = new jpBean("Mango", R.mipmap.bengjing1);
+            jpBean mang = new jpBean("陕西", R.mipmap.sx1wu);
             fruitList.add(mango);
-            jpBean man = new jpBean("Mango", R.mipmap.bengjing1);
+            jpBean mag = new jpBean("厦门", R.mipmap.xm1wu);
             fruitList.add(mango);
-            jpBean mngo = new jpBean("Mango", R.mipmap.bengjing1);
-            fruitList.add(mango);
-
         }
     }
 
     private void initView() {
-        mText_looper = mMainPage_fragment.findViewById(R.id.text_looper);
         mLookmore = mMainPage_fragment.findViewById(R.id.look_more);
         mMainPage_goto_login = mMainPage_fragment.findViewById(R.id.mainPage_goto_login);
         LooperPager = mMainPage_fragment.findViewById(R.id.main_page_looper);

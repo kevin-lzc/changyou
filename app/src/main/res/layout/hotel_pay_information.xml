@@ -67,7 +67,7 @@
 
 
             <CalendarView
-                android:layout_width="80dp"
+                android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
@@ -88,20 +88,12 @@
 
 
             <CalendarView
-                android:layout_width="80dp"
+                android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:background="@null" />
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:background="@null"
-                android:text="选择更多房型"
-                android:textColor="#CCCCCC"></Button>
         </LinearLayout>
 
         <TextView
@@ -347,15 +339,17 @@
 
         </TextView>
 
-        <TextView
+        <EditText
             android:layout_marginTop="10dp"
-
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
-            android:text="+86 |"
+            android:hint="+86 |"
+            android:background="@null"
             android:orientation="vertical"
-            ></TextView>
+            >
+
+        </EditText>
 
 
 
@@ -445,7 +439,9 @@
             android:text="总额："
             android:textSize="15sp"
             android:textColor="@android:color/holo_red_light"
-            ></TextView>
+            >
+
+        </TextView>
         <TextView
             android:layout_gravity="center_vertical"
 
@@ -454,7 +450,9 @@
             android:text="¥ ？？？"
             android:textSize="25sp"
             android:textColor="@android:color/holo_red_light"
-            ></TextView>
+            >
+
+        </TextView>
 
         <TextView
             android:layout_width="wrap_content"
@@ -462,7 +460,9 @@
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
             android:text="咨询："
-            android:textSize="15sp"></TextView>
+            android:textSize="15sp">
+
+        </TextView>
 
         <Button
 
@@ -470,7 +470,9 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_gravity="center_vertical"
-            android:background="@mipmap/help"></Button>
+            android:background="@mipmap/help">
+
+        </Button>
 
         <Button
             android:layout_marginLeft="25dp"

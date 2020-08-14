@@ -97,33 +97,20 @@ public class jouneyphoto_fragmet extends Fragment implements WbShareCallback {
 
     private void initData() {
         for (int i = 0; i < 2; i++) {
-            jpBean apple = new jpBean("Apple", R.mipmap.bengjing1);
+            jpBean apple = new jpBean("北京", R.mipmap.bengjing1);
             fruitList.add(apple);
-            jpBean banana = new jpBean("Banana", R.mipmap.bengjing1);
+            jpBean banana = new jpBean("北京", R.mipmap.bengjing2);
             fruitList.add(banana);
-            jpBean orange = new jpBean("Orange", R.mipmap.bengjing1);
+            jpBean orange = new jpBean("厦门", R.mipmap.xm1wu);
             fruitList.add(orange);
-            jpBean watermelon = new jpBean("Watermelon",R.mipmap.bengjing1);
+            jpBean watermelon = new jpBean("重庆",R.mipmap.cq1);
             fruitList.add(watermelon);
-            jpBean pear = new jpBean("Pear",R.mipmap.bengjing1);
+            jpBean pear = new jpBean("重庆",R.mipmap.cq2);
             fruitList.add(pear);
-            jpBean grape = new jpBean("Grape", R.mipmap.bengjing1);
+            jpBean grape = new jpBean("桂林", R.mipmap.gl);
             fruitList.add(grape);
-            jpBean pineapple = new jpBean("Pineapple", R.mipmap.bengjing1);
+            jpBean pineapple = new jpBean("桂林", R.mipmap.gl);
             fruitList.add(pineapple);
-            jpBean strawberry = new jpBean("Strawberry", R.mipmap.bengjing1);
-            fruitList.add(strawberry);
-            jpBean cherry = new jpBean("Cherry", R.mipmap.bengjing1);
-            fruitList.add(cherry);
-            jpBean mango = new jpBean("Mango", R.mipmap.bengjing1);
-            fruitList.add(mango);
-            jpBean mang = new jpBean("Mango", R.mipmap.bengjing1);
-            fruitList.add(mango);
-            jpBean man = new jpBean("Mango", R.mipmap.bengjing1);
-            fruitList.add(mango);
-            jpBean mngo = new jpBean("Mango", R.mipmap.bengjing1);
-            fruitList.add(mango);
-
         }
     }
     private void doWeiboShare() {

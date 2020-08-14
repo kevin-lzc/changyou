@@ -54,33 +54,26 @@ public class fragment_jingdian extends Fragment {
     }
     private void initData() {
         for (int i = 0; i < 2; i++) {
-            jpBean apple = new jpBean("Apple", R.mipmap.bengjing1);
+            jpBean apple = new jpBean("", R.mipmap.bjtiantan);
             fruitList.add(apple);
-            jpBean banana = new jpBean("Banana", R.mipmap.bengjing1);
+            jpBean banana = new jpBean("", R.mipmap.bengjing2);
             fruitList.add(banana);
-            jpBean orange = new jpBean("Orange", R.mipmap.bengjing1);
+            jpBean orange = new jpBean("", R.mipmap.cq1);
             fruitList.add(orange);
-            jpBean watermelon = new jpBean("Watermelon",R.mipmap.bengjing1);
+            jpBean watermelon = new jpBean("",R.mipmap.cq2);
             fruitList.add(watermelon);
-            jpBean pear = new jpBean("Pear",R.mipmap.bengjing1);
+            jpBean pear = new jpBean("",R.mipmap.gl);
             fruitList.add(pear);
-            jpBean grape = new jpBean("Grape", R.mipmap.bengjing1);
+            jpBean grape = new jpBean("", R.mipmap.gl2);
             fruitList.add(grape);
-            jpBean pineapple = new jpBean("Pineapple", R.mipmap.bengjing1);
+            jpBean pineapple = new jpBean("", R.mipmap.hz1);
             fruitList.add(pineapple);
-            jpBean strawberry = new jpBean("Strawberry", R.mipmap.bengjing1);
+            jpBean strawberry = new jpBean("", R.mipmap.hz2);
             fruitList.add(strawberry);
-            jpBean cherry = new jpBean("Cherry", R.mipmap.bengjing1);
+            jpBean cherry = new jpBean("", R.mipmap.lasa1);
             fruitList.add(cherry);
-            jpBean mango = new jpBean("Mango", R.mipmap.bengjing1);
+            jpBean mango = new jpBean("", R.mipmap.lasa2);
             fruitList.add(mango);
-            jpBean mang = new jpBean("Mango", R.mipmap.bengjing1);
-            fruitList.add(mango);
-            jpBean man = new jpBean("Mango", R.mipmap.bengjing1);
-            fruitList.add(mango);
-            jpBean mngo = new jpBean("Mango", R.mipmap.bengjing1);
-            fruitList.add(mango);
-
         }
     }
 

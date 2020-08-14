@@ -5,37 +5,32 @@
     android:layout_width="match_parent"
     android:overScrollMode="never"
     android:layout_height="match_parent">
-<RelativeLayout
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/pay_confirm"
     android:layout_alignParentRight="true"
     android:orientation="vertical"
     >
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/view_pay_top"
-
         >
-
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             >
-
             <Button
                 android:id="@+id/view_pay_back"
                 android:layout_width="34dp"
                 android:layout_height="34dp"
-                android:layout_centerVertical="true"
                 android:background="@mipmap/back_black" />
             <TextView
                 android:id="@+id/view_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="风景名字"
+                android:text="北京天坛"
                 android:textSize="25sp"
                 android:textColor="@android:color/black"
                 android:layout_centerInParent="true"
@@ -51,72 +46,10 @@
 
     </LinearLayout>
 
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="100dp"
-        android:orientation="vertical"
-        android:id="@+id/layout_date_scroll"
-        android:layout_below="@id/view_pay_top"
-        android:background="#F3EAF3"
-        android:layout_alignParentRight="true"
-        >
-
-        <HorizontalScrollView
-            android:id="@+id/date_scroll"
-            android:scrollbars="none"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp" >
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:layout_margin="10dp">
-
-                <GridView
-                    android:id="@+id/grid"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:numColumns="auto_fit"
-                    android:stretchMode="spacingWidthUniform"></GridView>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <Button
-                        android:id="@+id/view_more_date"
-                        android:layout_width="53dp"
-                        android:layout_height="47dp"
-                        android:layout_marginLeft="300dp"
-                        android:background="@mipmap/right" />
-
-                        <TextView
-                            android:layout_marginLeft="300dp"
-                            android:layout_below="@+id/more_date"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="更多日期"
-                            android:textSize="13sp"
-                            ></TextView>
-
-                </LinearLayout>
-
-            </LinearLayout>
-        </HorizontalScrollView>
-
-
-
-    </LinearLayout>
-
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_below="@id/layout_date_scroll"
         >
     <LinearLayout
         android:layout_width="fill_parent"
@@ -459,12 +392,13 @@
                 <Button
 
                     android:id="@+id/view_pay"
-                    android:layout_width="120dp"
+                    android:layout_width="80dp"
                     android:layout_height="50dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="25dp"
+                    android:layout_marginLeft="15dp"
                     android:background="@drawable/register_yanzhengma_bg"
                     android:text="去支付"
+                    android:textSize="20sp"
                     android:textColor="#FFFFFF" />
             </LinearLayout>
 
@@ -472,5 +406,5 @@
 
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>
 </ScrollView>

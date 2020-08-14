@@ -23,7 +23,7 @@
             android:layout_marginTop="50dp"
             android:textStyle="normal"
             android:textColor="#ffffff"
-            android:text="刘某"/>
+            android:text="lzc"/>
         <ImageButton
             android:background="@null"
             android:id="@+id/face"
